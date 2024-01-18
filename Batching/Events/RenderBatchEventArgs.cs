@@ -20,8 +20,8 @@ using System;
 
 namespace ScapeCore.Core.Batching.Events
 {
-    internal delegate void RenderBatchEventHandler(object source, RenderBatchEventArgs args);
-    internal class RenderBatchEventArgs : EventArgs
+    public delegate void RenderBatchEventHandler(object source, RenderBatchEventArgs args);
+    public class RenderBatchEventArgs : EventArgs
     {
         private readonly string eventInfo;
         private readonly GameTime gameTime;

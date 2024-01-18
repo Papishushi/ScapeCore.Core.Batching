@@ -19,8 +19,8 @@ using System;
 
 namespace ScapeCore.Core.Batching.Events
 {
-    internal delegate void StartBatchEventHandler(object source, StartBatchEventArgs args);
-    internal sealed class StartBatchEventArgs : EventArgs
+    public delegate void StartBatchEventHandler(object source, StartBatchEventArgs args);
+    public sealed class StartBatchEventArgs : EventArgs
     {
         private readonly string eventInfo;
         public StartBatchEventArgs(string Text) => eventInfo = Text;
