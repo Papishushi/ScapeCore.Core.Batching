@@ -17,7 +17,7 @@
  * resource. This class do not automatically update the dependencies.
  */
 
-using ScapeCore.Core.Batching.Tools;
+using ScapeCore.Core.Tools;
 using System;
 using System.Collections.Generic;
 
