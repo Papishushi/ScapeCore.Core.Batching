@@ -39,8 +39,8 @@ namespace ScapeCore.Core.Batching.Resources
         public void Add(ResourceInfo info, Type dependency, dynamic resource)
         {
             _dependenciesPerType.Add(new(dependency, new(info.ResourceName, info.TargetType)));
-            if (_dependencies.ContainsKey(info))
-                _dependencies[info].dependencies.Add(dependency);
+            if (_dependencies.TryGetValue(info, out ResourceWrapper? value))
+                value.dependencies.Add(dependency);
             else
             {
                 var wrapper = new ResourceWrapper(resource, dependency);
